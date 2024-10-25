@@ -1,0 +1,139 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #86d3ef;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#inputtarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form button {
+    width: 25%;
+    padding: 10px;
+    background-color: #8cf9b5;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+#form button:hover {
+    background-color: #a8faac;
+}
+
+
+/* Estilos de las tareas */
+.tareas {
+    margin-top: 10px;
+}
+
+.tareas div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Texto de la tarea */
+.tareas p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Botón eliminar */
+.tareas button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.tareas button:hover {
+    background-color: #c82333;
+}
+
+/* Colores dinámicos */
+.red {
+    border: 2px solid red;
+    background-color: rgb(240, 165, 165); /* Fondo rojo */
+}
+
+.yellow {
+    border: 2px solid rgb(246, 246, 21);
+    background-color: rgb(243, 243, 173); /* Fondo amarillo */
+}
+
+.green {
+    border: 2px solid green;
+    background-color: rgb(179, 238, 179); /* Fondo verde */
+}
+
+/* Transiciones al hacer hover en los colores */
+.tareas div.red:hover {
+    background-color: #f5c6cb;
+}
+
+.tareas div.yellow:hover {
+    background-color: #ffeeba;
+}
+
+.tareas div.green:hover {
+    background-color: #c3e6cb;
+}
+
+/* Cabecera */
+.head {
+    background-color: aquamarine;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+}
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #25fdf9;
+    color: black;
+    margin-left: 25px;
+    display: flex;
+    margin-top: -220px;
+}
+
+.btn-primary:hover {
+    background-color: #97faba;
+}
+

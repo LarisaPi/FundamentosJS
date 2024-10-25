@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo con Canvas</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        /* Fondo del lienzo */
+        #lienzo {
+            background-color: #a3e4db; /* Fondo claro tipo juego */
+            border: 2px solid #333; /* Bordes oscuros para resaltar el contenedor */
+            display: block;
+            margin: 0 auto; /* Centrar el canvas */
+            box-shadow: 0px 0px 15px rgba(229, 231, 162, 0.5); /* Sombra para darle un efecto flotante */
+            margin-top: 50px;
+            background-image: url('../imagenes/minas.jpeg'); /* Ruta de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            animation: moveBackground 20s linear infinite; /* Llama a la animación */
+            z-index: 1; /* Coloca el fondo detrás del lienzo */
+        }
+        @keyframes moveBackground {
+            0% {
+                background-position: 0 0; /* Posición inicial */
+            }
+            100% {
+                background-position: 100% 100%; /* Mueve el fondo a la esquina inferior derecha */
+            }
+        }
+    
+
+        /* Estilo para el puntaje */
+        #scoreDisplay {
+            color: #3c32c0;
+            font-size: 24px;
+            font-family: 'Press Start 2P', cursive;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            text-shadow: 2px 2px 0 #b6f58c; 
+        }
+        .gameOverContainer {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            text-align: center; 
+            color: black; 
+            font-family: Arial, sans-serif; 
+            z-index: 10; 
+        }
+        .scoreDisplay{
+            margin-top: 200px;
+            margin-left: 400px;  
+        }
+
+        /* Estilo del botón de reiniciar */
+        .restartButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #8cecba;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            top: 250px;
+            left: 230px;
+            z-index: 2;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+            transition: all 0.3s ease;
+            margin-top: 200px;
+            margin-left: 400px;  
+        }
+
+        .restartButton:hover {
+            background-color: #8ceffa; /* Color más oscuro al hacer hover */
+            transform: scale(1.1); /* Efecto de crecimiento */
+        
+        }
+
+        .restartButton:active {
+            transform: scale(1.05); /* Efecto de "clic" */
+        }
+
+        /* Estilo para un botón "Regresar al inicio" */
+        .backButton {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            top: 400px;
+            left: 230px;
+            z-index: 2;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+            transition: all 0.3s ease;
+        }
+
+        .backButton:hover {
+            background-color: #388e3c;
+            transform: scale(1.1);
+        }
+
+        .backButton:active {
+            transform: scale(1.05);
+        }
+       .btn-primary {
+            background-color: #a4caf5; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color:black;
+        }
+
+        .btn-primary:hover {
+            background-color: #8be7aa; 
+        }
+
+        .container {
+        color :rgb(71, 231, 76);
+        }
+        .highScoreDisplay{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .scoreDisplay{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 2px;
+            margin-left: 250px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mi juego con Javascript</h1>
+        <canvas id="lienzo" width="600" height="400"></canvas>
+    </div>
+    <script src="./app.js"></script>
+    <a href="../index.html">
+        <button class="btn-primary">Regresa al inicio  </button>
+    </a>
+</body>
+</html>

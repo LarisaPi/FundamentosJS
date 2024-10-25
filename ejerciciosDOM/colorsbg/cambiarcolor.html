@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM colors</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        button{
+            background-color: rgb(251, 190, 143);
+        }
+        .btn-primary {
+            background-color: #a4f5ea; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color:black;
+        }
+
+        .btn-primary:hover {
+            background-color: #8be7aa; 
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btnchange">Cambiar color</button>
+    <script src="./app.js"></script>
+    <a href="../index.html">
+        <button class="btn-primary">Regresa al inicio  </button>
+    </a>
+</body>
+</html>

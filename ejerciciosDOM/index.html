@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /*Fondo*/
+            background-color: #a2e0fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('./imagenes/javaimagen.png'); /* Ruta de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            animation: moveBackground 20s linear infinite; /* Llama a la animación */
+            z-index: 1; /* Coloca el fondo detrás del lienzo */
+        }
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0 0; /* Posición inicial */
+            }
+            100% {
+                background-position: 100% 100%; /* Mueve el fondo a la esquina inferior derecha */
+            }
+        }
+        
+        
+        h1 {
+            color: black;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(241, 243, 239, 0.8); /* Fondo con transparencia */
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            width: 500px; /* Ancho fijo para el menú */
+        }
+
+
+        ul {
+            list-style: none; /* Eliminar los puntos de la lista */
+            padding: 0; /* Eliminar el padding */
+        }
+
+        li {
+            margin: 10px 0; /* Espacio entre los elementos de la lista */
+        }
+
+        button {
+            width: 100%; /* Botón ocupa todo el ancho */
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: rgba(37, 253, 249, 0.8); /* Fondo transparente */
+            color: black;
+        }
+
+        .btn-primary {
+            background-color: rgba(37, 253, 249, 0.8); /* Fondo transparente */
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(151, 250, 186, 0.8); /* Fondo transparente en hover */
+        }
+
+        .btn-secondary {
+            background-color: rgba(37, 253, 249, 0.8); /* Fondo transparente */
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(151, 250, 186, 0.8); /* Fondo transparente en hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fundamentos de JavaScript</h1>
+        <ul>
+            <li>
+                <a href="./animado/circulodinamico.html">
+                    <button class="btn-primary">Circulo</button>
+                </a>
+            </li>
+            <li>
+                <a href="./animado/cuadradodinamico.html">
+                    <button class="btn-secondary">Cuadrado</button>
+                </a>
+            </li>
+            <li>
+                <a href="./colorsbg/colores.html">
+                    <button class="btn-primary">Deslizador con colores</button>
+                </a>
+            </li>
+            <li>
+                <a href="./colorsbg/cambiarcolor.html">
+                    <button class="btn-primary">Colores dinámicos</button>
+                </a>
+            </li>
+            <li>
+                <a href="./Dibujos/dibujo.html">
+                    <button class="btn-primary">Dibujo</button>
+                </a>
+            </li>
+            <li>
+                <a href="./rebota/rebota.html">
+                    <button class="btn-primary">Rebota</button>
+                </a>
+            </li>
+            <li>
+                <a href="./todoapp/todoapp.html">
+                    <button class="btn-primary">Todoapp</button>
+                </a>
+            </li>
+            <li>
+                <a href="./game/game.html">
+                    <button class="btn-primary">Game</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
